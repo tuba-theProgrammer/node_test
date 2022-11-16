@@ -351,8 +351,7 @@ const Newsolution = () => {
               .route[calculations.deliveryRoutes[0].route.length - 1].customer
           } to ${data.customers[index_item]}`;
 
-          // var newRoute = calculations.currentRoute[0];
-          // newRoute.path = newPath;
+        
           calculations.deliveryRoutes[
             calculations.deliveryRoutes.length - 1
           ].route.push({
@@ -385,7 +384,7 @@ const Newsolution = () => {
         calculations.currentRoute = [];
       }
     }
-    /* If there a no more customers remaining */
+    /* Check If there a no more customers remaining */
 
     if (calculations.customersRemaining < 1) {
       var maxDistance = 0;
@@ -403,7 +402,7 @@ const Newsolution = () => {
 
       calculations.deliveryRoutes.push({
         totalLength: `${
-          calculations.prevDistance / 1609.34
+          calculations.prevDistance 
         } meters from Store.`,
         route: {
           customer: data.customers[index],
